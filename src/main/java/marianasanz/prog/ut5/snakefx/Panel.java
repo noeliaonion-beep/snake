@@ -1,13 +1,14 @@
 package marianasanz.prog.ut5.snakefx;
 
 public class Panel {
-    int[][] mapa;
-    int manzanas;
-
+    private int[][] mapa;
+    private int manzanas;
+    private int longitud;
 
     public Panel() {
-        this.mapa =new int[8][8];
+        this.mapa =new int[9][9];
         this.manzanas = 64;
+        this.longitud = -3;
     }
 
 
@@ -31,11 +32,21 @@ public class Panel {
     public void comer(){
         //TODO Cuando la serpiente se posicione encima de una manzana come y aumenta en +1 de tamaño de cuerpo
     }
+
     public void ganar(){
         //TODO Cuando la serpiente ocupe lo mismo que mapa gana o cuando manzanas llegue a 0 gana
+        if (manzanas == 0){
+            System.out.println("---------------------");
+            System.out.println("-     Has ganado    -");
+            System.out.println("---------------------");
+        }
     }
+
     public void perder(){
         //TODO cuando la serpiente o se toque a si misma o se choque contra la pared pierde
+        if (){
+            
+        }
     }
 }
 
