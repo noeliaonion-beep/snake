@@ -41,14 +41,22 @@ public class Panel {
     }
 
     public void comer(){
-        //TODO Cuando la serpiente se posicione encima de una manzana come y aumenta en +1 de tamaño de cuerpo
+        //TODO Cuando la serpiente se posicione encima de una manzana come y aumenta en +1 de tamaño de cuerpo.
 
-        for (int i = 0; i < serpiente; i++) {
-            for (int j = 0; j < manzanas; j--) {
-                System.out.println();
+//        int casilla = 0;
+        int posicionSerpiente = 0;
+        int posicionManzana = 0;
+
+        if (posicionSerpiente == posicionManzana) {
+            for (int i = 0; i < mapa.length; i++) {
+                for (int k = 0; k < serpiente; k++) {
+                    for (int l = 0; l < manzanas; l++) {
+
+                        }
+                    }
             }
-        }
 
+        }
         
     }
     public void ganar(){
@@ -57,6 +65,11 @@ public class Panel {
     public void perder(){
         //TODO cuando la serpiente o se toque a si misma o se choque contra la pared pierde
     }
+
+
+void main() {
 }
+
+
 
 
