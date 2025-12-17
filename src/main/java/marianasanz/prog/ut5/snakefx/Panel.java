@@ -46,17 +46,37 @@ public class Panel {
         String tecla = teclao.nextLine();
         int colcabeza = 0;
         int filacabeza = 0;
+        int valorCabeza=-1;
         for (int i = 0; i < mapa.length; i++) {
             for (int j = 0; j < mapa[0].length; j++) {
                 if (mapa[i][j] == -1) {
                     colcabeza = j;
                     filacabeza = i;
                 }
+            }
+        }
+        mapa[i-1][j] = -1;
+        for (int i = -1; i < 1 ; i++) {
+            for (int j = -1; j < 1 ; j++) {
+                if((i==0 || j==0) && (i==0)) {
+
+                }
+            }
+        }
+
                 if (tecla.equalsIgnoreCase("w")) {
-                    mapa[colcabeza - 1][filacabeza] = -1;
-                    for (int k = -1; k <= 1; k++) {
-                        for (int l = -1; l <= 1; l++) {
-                            if (k == 0 && l == 0) continue;
+                    //mapa[colcabeza - 1][filacabeza] = valorCabeza;
+                    for (int k = 0; k <mapa.length ; k++) {
+                        for (int l = 0; l <mapa[0].length ; l++) {
+                            if (mapa[k][j]==valorCabeza){
+                                mapa[k][j] -= 1;
+                            } else if (mapa[k][j]==valorCabeza-1) {
+                                mapa[k][j] -= 1;
+                            }else if (mapa[k][j]==valorCabeza-2) {
+                                mapa[k][j] -= 1;
+                            }else if (mapa[k][j]==longitud){
+                                mapa[k][j] = 0;
+                            }
                         }
 
                     }
@@ -65,6 +85,8 @@ public class Panel {
             }
         }
     }
+
+
 
     public void comer(){
         //TODO Cuando la serpiente se posicione encima de una manzana come y aumenta en +1 de tamaño de cuerpo
@@ -88,6 +110,8 @@ public class Panel {
         Panel panel=new Panel();
         panel.pintarSerpiente();
         panel.mostrarMatriz();
+        panel.movimiento();
+
     }
 }
 
