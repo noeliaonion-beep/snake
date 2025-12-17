@@ -40,11 +40,30 @@ public class Panel {
         //TODO Posicion random en el mapa y restar de el contador de manzana cada vez que se use
     }
 
-    public void movimiento(){
+    public void movimiento() {
         //TODO Capturar el movimiento de las flechas y que se mueva la serpiente dentro de la matriz segun la posicion
         Scanner teclao = new Scanner(System.in);
-        String tecla= teclao.nextLine();
+        String tecla = teclao.nextLine();
+        int colcabeza = 0;
+        int filacabeza = 0;
+        for (int i = 0; i < mapa.length; i++) {
+            for (int j = 0; j < mapa[0].length; j++) {
+                if (mapa[i][j] == -1) {
+                    colcabeza = j;
+                    filacabeza = i;
+                }
+                if (tecla.equalsIgnoreCase("w")) {
+                    mapa[colcabeza - 1][filacabeza] = -1;
+                    for (int k = -1; k <= 1; k++) {
+                        for (int l = -1; l <= 1; l++) {
+                            if (k == 0 && l == 0) continue;
+                        }
 
+                    }
+                }
+
+            }
+        }
     }
 
     public void comer(){
